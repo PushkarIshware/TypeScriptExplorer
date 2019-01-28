@@ -1,0 +1,21 @@
+{
+  "name": "workplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node out/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pushkar Ishware",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "readline-sync": "^1.4.9",
+    "typescript-require": "^0.2.10"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.120",
+    "@types/node": "^10.12.18"
+  }
+}
