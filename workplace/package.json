@@ -10,6 +10,7 @@
   "author": "Pushkar Ishware",
   "license": "ISC",
   "dependencies": {
+    "jsonfile": "^5.0.0",
     "lodash": "^4.17.11",
     "readline-sync": "^1.4.9",
     "typescript-require": "^0.2.10"

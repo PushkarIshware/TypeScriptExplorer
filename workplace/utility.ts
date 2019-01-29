@@ -30,47 +30,47 @@ class Utility
         console.log(template);
     }
 
-    details()
-    {
-        try
-        {
-            var json = require('./grocery.json');
-            //console.log(JSON.parse(json));
+    // details()
+    // {
+    //     try
+    //     {
+    //         var json = require('./grocery.json');
+    //         //console.log(JSON.parse(json));
 
-            const myObjStr = JSON.stringify(json);
+    //         const myObjStr = JSON.stringify(json);
 
-            //console.log(myObjStr);
-            var data = JSON.parse(myObjStr);
-            //console.log(x['rice'])
-        }
-        catch (err)
-        {
-            console.log("Cannot find module 'grocery.json'");
-        }
-        //for rice
-        for(var i of data['rice'])
-        {   
-            console.log("Rice name : "+i['name']+"\nPrice per KG : "+i['price']+"\nAvaibility : "+i['available']);
+    //         //console.log(myObjStr);
+    //         var data = JSON.parse(myObjStr);
+    //         //console.log(x['rice'])
+    //     }
+    //     catch (err)
+    //     {
+    //         console.log("Cannot find module 'grocery.json'");
+    //     }
+    //     //for rice
+    //     for(var i of data['rice'])
+    //     {   
+    //         console.log("Rice name : "+i['name']+"\nPrice per KG : "+i['price']+"\nAvaibility : "+i['available']);
 
-            console.log("Total Price is : "+i['price']*i['available']);
-        }
+    //         console.log("Total Price is : "+i['price']*i['available']);
+    //     }
 
-        //for pulses
-        for(var i of data['pulses'])
-        {   
-            console.log("pulses name : "+i['name']+"\nPrice per KG : "+i['price']+"\nAvaibility : "+i['available']);
+    //     //for pulses
+    //     for(var i of data['pulses'])
+    //     {   
+    //         console.log("pulses name : "+i['name']+"\nPrice per KG : "+i['price']+"\nAvaibility : "+i['available']);
 
-            console.log("Total Price is : "+i['price']*i['available']);
-        }
+    //         console.log("Total Price is : "+i['price']*i['available']);
+    //     }
 
-        //for wheats
-        for(var i of data['wheats'])
-        {   
-            console.log("wheats name : "+i['name']+"\nPrice per KG : "+i['price']+"\nAvaibility : "+i['available']);
+    //     //for wheats
+    //     for(var i of data['wheats'])
+    //     {   
+    //         console.log("wheats name : "+i['name']+"\nPrice per KG : "+i['price']+"\nAvaibility : "+i['available']);
 
-            console.log("Total Price is : "+i['price']*i['available']);
-        }
-    }
+    //         console.log("Total Price is : "+i['price']*i['available']);
+    //     }
+    // }
 
 } 
 
