@@ -14,9 +14,9 @@ class MainAddressBook
             console.log("Choose Option What Do You Want");
             console.log("1.Create");
             console.log("2.Open");
-            console.log("3.Save");
-            console.log("4.SaveAs");
-            console.log("5.Quit");
+            //console.log("3.Save");
+           // console.log("4.SaveAs");
+            console.log("4.Quit");
             ch = parseInt(read.question("Enter Your Choice >>> "));
             //console.log(typeof(ch))
             switch(ch)
@@ -29,22 +29,19 @@ class MainAddressBook
                         console.log("2");
                         manager.open();
                         break;
+                // case 3:
+                //         console.log("3");
+                //         manager.save();
+                //         break;
+
                 case 3:
-                        console.log("3");
-                        manager.save();
-                        break;
-                case 4:
-                        console.log("4");
-                        manager.saveAs();
-                        break;
-                case 5:
                         console.log("exit");
                         break;
                 default:
                 console.log("Enter valid choice...")
             }
         }
-        while(ch!=5);
+        while(ch!=3);
     }
 }
 

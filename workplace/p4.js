@@ -15,6 +15,8 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 // var inventory = require('./p1')
 // var inv = new inventory();
+var fs = require('fs');
+var jsonfile = require('jsonfile');
 var read = require('readline-sync');
 var p1_1 = require("./p1");
 var InventoryManage = /** @class */ (function (_super) {
@@ -32,23 +34,56 @@ var InventoryManage = /** @class */ (function (_super) {
         var value = read.question("");
         return value;
     };
+    InventoryManage.prototype.readjson_grocery = function () {
+        var data = fs.readFileSync('/home/admin1/Typescript/workplace/grocery.json');
+        var content = JSON.parse(data);
+        return content;
+    };
     InventoryManage.prototype.purchase = function () {
         console.log("Available items in our grocery store:\n");
-        console.log("What you want to purchase?\n1.Rice     2.Pulses     3.Wheats\n");
+        console.log("what you want to add ?");
+        console.log("\n1.Rice     2.Pulses     3.Wheats\n");
         console.log("Enter Your choice>>>");
         var choice = IM.input();
         console.log("Your choice is " + choice);
         if (choice == 1) {
-            console.log("Rice details");
-            I.rice_details();
+            var data = this.readjson_grocery();
+            var name = read.question("Enter Name:");
+            var price = read.question("Enter price:");
+            var available = read.question("Enter availability:");
+            var object = { "name": name,
+                "price": price,
+                "available": available };
+            data.rice.push(object);
+            jsonfile.writeFileSync('/home/admin1/Typescript/workplace/grocery.json', data, { flag: 'w' });
+            // console.log("Rice details");
+            // I.rice_details();
         }
         else if (choice == 2) {
-            console.log("Pulses details");
-            I.pulse_details();
+            var data = this.readjson_grocery();
+            var name = read.question("Enter Name:");
+            var price = read.question("Enter price:");
+            var available = read.question("Enter availability:");
+            var object = { "name": name,
+                "price": price,
+                "available": available };
+            data.pulses.push(object);
+            jsonfile.writeFileSync('/home/admin1/Typescript/workplace/grocery.json', data, { flag: 'w' });
+            // console.log("Pulses details")
+            // I.pulse_details();
         }
         else if (choice == 3) {
-            console.log("Wheats details");
-            I.wheat_details();
+            var data = this.readjson_grocery();
+            var name = read.question("Enter Name:");
+            var price = read.question("Enter price:");
+            var available = read.question("Enter availability:");
+            var object = { "name": name,
+                "price": price,
+                "available": available };
+            data.wheats.push(object);
+            jsonfile.writeFileSync('/home/admin1/Typescript/workplace/grocery.json', data, { flag: 'w' });
+            // console.log("Wheats details")
+            // I.wheat_details();
         }
         else {
             console.log("Invalid Choice...");

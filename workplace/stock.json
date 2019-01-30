@@ -1,0 +1,25 @@
+{
+    "stock":
+    [
+        {
+            "name":"google",
+            "price":100,
+            "total":10
+        },
+        {
+            "name":"microsoft",
+            "price":10,
+            "total":100
+        },
+        {
+            "name":"facebook",
+            "price":1000,
+            "total":30
+        },
+        {
+            "name":"amazon",
+            "price":6000,
+            "total":10
+        }
+    ]
+}

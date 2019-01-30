@@ -1,0 +1,14 @@
+{
+    "patients":[
+        {"name":"raja",
+            "id":1,
+            "number":8983221166},
+            {"name":"ram",
+                "id":55,
+                "number":1234567890},
+                {"name":"rani",
+                    "id":5,
+                    "number":8596741232}
+
+    ]
+}
